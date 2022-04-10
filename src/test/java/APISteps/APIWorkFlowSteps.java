@@ -23,6 +23,7 @@ public class APIWorkFlowSteps {
     Response response;
     public static String employee_id;
 
+    // ---------------------------via API workflow -------------------------------
     @Given("a request is prepared for creating an employee")
     public void a_request_is_prepared_for_creating_an_employee() {
         request = given().header(APIConstants.HEADER_CONTENT_TYPE, APIConstants.CONTENT_TYPE)
@@ -60,7 +61,7 @@ public class APIWorkFlowSteps {
         System.out.println(employee_id);
     }
 
-    // ----------------------------------------------------------------------------------
+    // -------------------------- Retrieving created employee --------------------------
 
     @Given("a request is prepared to get the created employee using api call")
     public void a_request_is_prepared_to_get_the_created_employee_using_api_call() {
